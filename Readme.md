@@ -41,4 +41,61 @@
 - [Basic Linux Commands](https://www.tutorialspoint.com/unix/unix-useful-commands.htm)
 - [SSH Access Documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstancesLinux.html)
 
+
+# Week 2: Installing MS-SQL on Ubuntu 22.04
+
+## Steps
+
+- **Install MS-SQL Server**
+  - Follow the [official guide](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-ubuntu) to install MS-SQL Server on Ubuntu 22.04:
+    ```bash
+    curl -sSL https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+    sudo add-apt-repository "$(curl -sSL https://packages.microsoft.com/config/ubuntu/22.04/mssql-server-2022.list)"
+    sudo apt-get update
+    sudo apt-get install -y mssql-server
+    sudo /opt/mssql/bin/mssql-conf setup
+    sudo systemctl status mssql-server
+    ```
+
+- **Install Command-Line Tools**
+  - Install the SQL Server command-line tools:
+    ```bash
+    curl -sSL https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+    sudo add-apt-repository "$(curl -sSL https://packages.microsoft.com/config/ubuntu/22.04/prod.list)"
+    sudo apt-get update
+    sudo apt-get install -y mssql-tools unixodbc-dev
+    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
+    source ~/.bashrc
+    ```
+
+- **Connect to the Server Locally**
+  - Connect using the command-line tool:
+    ```bash
+    sqlcmd -S localhost -U SA -P 'your_password'
+    ```
+
+- **Create a Database**
+  - Create a new database:
+    ```sql
+    CREATE DATABASE TestDB;
+    GO
+    ```
+
+- **Insert Data into the Database**
+  - Insert data into the newly created database:
+    ```sql
+    USE TestDB;
+    GO
+    CREATE TABLE TestTable (ID INT, Name NVARCHAR(50));
+    INSERT INTO TestTable (ID, Name) VALUES (1, 'John Doe');
+    INSERT INTO TestTable (ID, Name) VALUES (2, 'Jane Smith');
+    GO
+    ```
+
+## Resources
+
+- [MS-SQL Server on Linux Documentation](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-overview)
+- [SQL Server Tools Documentation](https://docs.microsoft.com/en-us/sql/tools/sqlcmd-utility)
+- [SQL Tutorial](https://www.w3schools.com/sql/)
+
 This guide provides a streamlined process for setting up and managing an AWS Lightsail instance.
