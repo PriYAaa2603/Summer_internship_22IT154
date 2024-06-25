@@ -1,6 +1,6 @@
 # AWS Lightsail Instance Setup Guide
 
-## Week 1
+## Week 1:  AWS Lightsail Instance Setup and Management
 
 - **Create an AWS Free Tier Account**
   - Sign up at [AWS Free Tier](https://aws.amazon.com/free) and log in to the AWS Management Console.
