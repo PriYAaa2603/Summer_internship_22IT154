@@ -1,4 +1,4 @@
-# AWS Lightsail Instance Setup Guide
+Introduction: I have done my internship as a DevOps Trainee for 5 weeks in offline mode and working with different services of AWS having practical insights to the projects which can be helpful for the company. Here is the weekly report of the work done by me:
 
 ## Week 1:  AWS Lightsail Instance Setup and Management
 
