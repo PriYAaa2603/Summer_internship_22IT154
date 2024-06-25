@@ -201,11 +201,42 @@
 - Write a script to back up your Lightsail bucket.
 - Schedule this script to run daily at a specific time using `cron` jobs on your server.
 
-## Example Commands and Code Snippets
+# Week 5: AWS Lambda Setup and Deployment Guide
 
-### Install Dependencies for Node.js Project
-```bash
-npm install express aws-sdk multer jsonwebtoken
+### 1. Creating a Lambda Function in AWS
+
+- First, I navigate to the AWS Management Console and select the Lambda service.
+- Next, I click on "Create function" and choose the "Author from scratch" option.
+- I provide a function name, select the runtime environment (Node.js or .NET Core), and choose an existing role or create a new one with sufficient permissions.
+
+### 2. Running Basic Node.js and .NET Code in the Function
+
+- I write my Node.js or .NET Core code in the Lambda function's code editor.
+- I ensure that my code handles event input and produces appropriate output.
+
+### 3. Uploading a Zip File as Code in the Function
+
+- If my codebase exceeds the Lambda function editor's size limit, I package my code into a zip file.
+- I upload the zip file directly to the Lambda function creation wizard or update the existing function code via the console.
+
+### 4. Using S3 Bucket Objects for Uploading Larger Zip Files
+
+- First, I create an S3 bucket in the AWS Management Console if I haven't already.
+- Then, I upload my zip file containing Lambda function code to the S3 bucket.
+- I use the Lambda function creation wizard or AWS CLI to reference the S3 bucket object as the source for my function's code.
+
+### 5. Testing It Through Various JSON Inputs
+
+- I use the Lambda console to configure test events with different JSON payloads.
+- I verify that my Lambda function handles each input correctly and produces expected outputs.
+
+### 6. Making API Gateway and Setting Up Resource and Method
+
+- First, I navigate to the API Gateway service in the AWS Management Console.
+- I create a new API or select an existing one.
+- Then, I define a resource and method that integrates with my Lambda function.
+- I configure request and response mappings as needed.
+- Finally, I deploy the API to a stage and test the integration using various HTTP methods and payloads.
 
 
 This guide provides instructions for managing MS-SQL services, handling file compression, monitoring system resources, connecting to servers, and running .NET Core applications on Linux.
