@@ -1,8 +1,6 @@
 # AWS Lightsail Instance Setup and Management
 
-This guide walks you through setting up an AWS Free Tier account, creating and managing an AWS Lightsail instance, and implementing basic Linux commands.
-
-## Steps
+Here is a brief overview of the tasks performed by me in Week 1.
 
 - **Creating an AWS Free Tier Account and Logging In**
   - Sign up for an AWS Free Tier account at [AWS Free Tier](https://aws.amazon.com/free).
@@ -20,10 +18,6 @@ This guide walks you through setting up an AWS Free Tier account, creating and m
   - After the instance is created, go to the Lightsail dashboard.
   - Click on the instance to open its management page.
   - Click on the "Connect using SSH" button to open the web-based SSH client.
-  - Alternatively, use an SSH client like PuTTY or your terminal:
-    ```bash
-    ssh -i /path/to/your/private-key.pem username@your-instance-public-ip
-    ```
 
 - **Learning About the Networking, Storage, and Other Aspects of an Instance**
   - **Networking**:
