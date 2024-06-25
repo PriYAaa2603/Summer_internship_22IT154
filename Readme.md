@@ -178,4 +178,34 @@
 - [SQL Server Management Studio (SSMS) Documentation](https://docs.microsoft.com/en-us/sql/ssms/sql-server-management-studio-ssms)
 - [.NET Core on Linux Documentation](https://docs.microsoft.com/en-us/dotnet/core/install/linux-ubuntu)
 
+- # Week 4: Creating and Managing APIs with Node.js and AWS Lightsail
+
+## Steps
+
+### Creating Basic APIs with Node.js and Using Postman
+- Set up a basic Node.js server using Express to create RESTful APIs.
+- Use Postman to send requests to these APIs and verify their responses.
+
+### Creating APIs for Uploading and Deleting Files in Lightsail Bucket
+- **Uploading Files**: Create an API endpoint to upload files to an AWS Lightsail bucket using `multer` for handling file uploads and `aws-sdk` for interacting with AWS services.
+- **Deleting Files**: Create an API endpoint to delete files from the Lightsail bucket using `aws-sdk`.
+
+### Creating APIs for Creating and Deleting Folders in Lightsail Bucket
+- **Creating Folders**: Develop an API to create folders in the Lightsail bucket by simulating folder creation through object keys in S3.
+- **Deleting Folders**: Develop an API to delete folders by removing all objects within the specified folder in the bucket.
+
+### Adding JWT Tokenization for Authentication
+- Implement JWT (JSON Web Token) to secure your APIs. Generate tokens upon user authentication and validate these tokens for protected routes.
+
+### Making a Backup Script for Daily Bucket Backup
+- Write a script to back up your Lightsail bucket.
+- Schedule this script to run daily at a specific time using `cron` jobs on your server.
+
+## Example Commands and Code Snippets
+
+### Install Dependencies for Node.js Project
+```bash
+npm install express aws-sdk multer jsonwebtoken
+
+
 This guide provides instructions for managing MS-SQL services, handling file compression, monitoring system resources, connecting to servers, and running .NET Core applications on Linux.
